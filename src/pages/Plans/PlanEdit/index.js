@@ -84,8 +84,9 @@ export default function PlanEdit() {
 
       <ActionContent loading={loading}>
         <Form schema={schema} onSubmit={handleSubmit} id="plans-form">
-          <label htmlFor="planTitle">PLAN TITLE</label>
+          {/* <label htmlFor="planTitle">PLAN TITLE</label> */}
           <Input
+            label="PLAN TITLE"
             name="title"
             type="text"
             placeholder="Titulo do plano"
@@ -94,8 +95,9 @@ export default function PlanEdit() {
           />
           <div className="wrapper">
             <div className="organize">
-              <label htmlFor="planDuration">DURATION</label>
+              {/* <label htmlFor="planDuration">DURATION</label> */}
               <Input
+                label="DURATION"
                 name="duration"
                 type="number"
                 placeholder="Month duration"
@@ -104,8 +106,9 @@ export default function PlanEdit() {
               />
             </div>
             <div className="organize">
-              <label htmlFor="monthlyPrice">MONTHLY PRICE</label>
+              {/* <label htmlFor="monthlyPrice">MONTHLY PRICE</label> */}
               <Input
+                label="MONTHLY PRICE"
                 name="price"
                 type="number"
                 placeholder="Monthly price for this plan"
@@ -114,8 +117,9 @@ export default function PlanEdit() {
               />
             </div>
             <div className="organize">
-              <label htmlFor="totalPrice">TOTAL PRICE</label>
+              {/* <label htmlFor="totalPrice">TOTAL PRICE</label> */}
               <Input
+                label="TOTAL PRICE"
                 readOnly
                 name="totalPrice"
                 placeholder="Total price calculated"

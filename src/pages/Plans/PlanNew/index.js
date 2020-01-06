@@ -56,8 +56,9 @@ export default function PlanNew() {
       </Toolbar>
       <ActionContent>
         <Form id="plans-form" onSubmit={handleSubmit}>
-          <label htmlFor="name">PLAN TITLE</label>
+          {/* <label htmlFor="name">PLAN TITLE</label> */}
           <Input
+            label="PLAN TITLE"
             name="title"
             type="text"
             placeholder="Plan title"
@@ -66,8 +67,9 @@ export default function PlanNew() {
           />
           <div className="wrapper">
             <div className="organize">
-              <label htmlFor="name">DURATION (MONTHS)</label>
+              {/* <label htmlFor="name">DURATION (MONTHS)</label> */}
               <Input
+                label="DURATION (MONTHS)"
                 name="duration"
                 type="number"
                 placeholder="Duration in months"
@@ -77,8 +79,9 @@ export default function PlanNew() {
             </div>
 
             <div className="organize">
-              <label htmlFor="name">MONTHLY PRICE</label>
+              {/* <label htmlFor="name">MONTHLY PRICE</label> */}
               <Input
+                label="MONTHLY PRICE"
                 name="price"
                 type="number"
                 placeholder="Monthly price"
@@ -94,8 +97,9 @@ export default function PlanNew() {
             </div>
 
             <div className="organize">
-              <label htmlFor="name">TOTAL PRICE</label>
+              {/* <label htmlFor="name">TOTAL PRICE</label> */}
               <Input
+                label="TOTAL PRICE"
                 name="totalPrice"
                 placeholder="Total price"
                 value={totalPrice}

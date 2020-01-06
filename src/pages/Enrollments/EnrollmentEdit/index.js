@@ -125,6 +125,7 @@ export default function EnrollmentEdit() {
         <form id="enrollment-form" onSubmit={e => handleSubmit(e)}>
           <label htmlFor="student_id">STUDENT</label>
           <AsyncSelect
+            // label="STUDENT"
             value={studentSelected}
             onInputChange={v => setStudentName(v)}
             loadOptions={loadStudents}
@@ -138,6 +139,7 @@ export default function EnrollmentEdit() {
             <div className="organize">
               <label htmlFor="plan_id">PLAN</label>
               <Select
+                // label="PLAN"
                 value={planSelected}
                 getOptionLabel={option => option.label}
                 getOptionValue={option => option.value}
@@ -154,6 +156,7 @@ export default function EnrollmentEdit() {
             <div className="organize">
               <label htmlFor="start_date">START DATE</label>
               <DatePicker
+                // label="START DATE"
                 name="start_date"
                 selected={initialDate}
                 dateFormat="dd/MM/yyyy"
@@ -163,6 +166,7 @@ export default function EnrollmentEdit() {
             <div className="organize">
               <label htmlFor="monthlyPrice">END DATE</label>
               <DatePicker
+                // label="END DATE"
                 className="readOnly"
                 selected={endDate}
                 dateFormat="dd/MM/yyyy"
@@ -173,6 +177,7 @@ export default function EnrollmentEdit() {
             <div className="organize">
               <label htmlFor="totalPrice">TOTAL PRICE</label>
               <input
+                // label="TOTAL PRICE"
                 value={totalPrice}
                 className="readOnly"
                 readOnly

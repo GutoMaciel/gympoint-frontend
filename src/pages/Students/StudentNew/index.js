@@ -43,18 +43,34 @@ export default function StudentList() {
       </Toolbar>
       <ActionContent>
         <Form onSubmit={handleSubmit} id="students-form">
-          <label htmlFor="name">FULL NAME</label>
-          <Input name="name" type="text" placeholder="John Doe" />
-          <label htmlFor="name">EMAIL</label>
-          <Input name="email" type="email" placeholder="example@email.com" />
+          {/* <label htmlFor="name">FULL NAME</label> */}
+          <Input
+            label="FULL NAME"
+            name="name"
+            type="text"
+            placeholder="John Doe"
+          />
+          {/* <label htmlFor="name">EMAIL</label> */}
+          <Input
+            label="EMAIL"
+            name="email"
+            type="email"
+            placeholder="example@email.com"
+          />
           <div className="wrapper">
             <div className="organize">
-              <label htmlFor="name">AGE</label>
-              <Input name="age" type="number" placeholder="Example: 35" />
+              {/* <label htmlFor="name">AGE</label> */}
+              <Input
+                label="age"
+                name="age"
+                type="number"
+                placeholder="Example: 35"
+              />
             </div>
             <div className="organize">
-              <label htmlFor="name">WEIGHT(kg)</label>
+              {/* <label htmlFor="name">WEIGHT(kg)</label> */}
               <Input
+                label="WEIGHT(kg)"
                 name="weight"
                 type="number"
                 // step="0.1"
@@ -62,8 +78,9 @@ export default function StudentList() {
               />
             </div>
             <div className="organize">
-              <label htmlFor="name">HEIGHT</label>
+              {/* <label htmlFor="name">HEIGHT</label> */}
               <Input
+                label="HEIGHT"
                 name="height"
                 type="number"
                 // step="0.01"
