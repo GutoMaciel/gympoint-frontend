@@ -121,7 +121,7 @@ export default function StudentEdit() {
                 label="WEIGHT (kg)"
                 name="weight"
                 type="number"
-                // step="0.1"
+                step="00.1"
                 placeholder="Example: 89"
               />
             </div>
@@ -131,7 +131,7 @@ export default function StudentEdit() {
                 label="HEIGHT"
                 name="height"
                 type="number"
-                // step="0.01"
+                step="0.01"
                 placeholder="Example: 1.77"
               />
             </div>

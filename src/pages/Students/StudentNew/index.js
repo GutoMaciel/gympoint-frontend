@@ -81,9 +81,9 @@ export default function StudentList() {
               {/* <label htmlFor="name">HEIGHT</label> */}
               <Input
                 label="HEIGHT"
-                name="height"
                 type="number"
-                // step="0.01"
+                name="height"
+                step="0.01"
                 placeholder="Example: 1.77"
               />
             </div>

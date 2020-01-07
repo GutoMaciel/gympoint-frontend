@@ -12,14 +12,21 @@ import api from '~/services/api';
 import Toolbar from '~/components/Toolbar';
 import ActionContent from '~/components/ActionContent';
 import DefaultTable from '~/components/DefaultTable';
+import Pagination from '~/components/Pagination';
 
 export default function EnrollmentList() {
   const [enrollments, setEnrollments] = useState([]);
+  const [page, setPage] = useState(1);
+  const [totalPages, setTotalPages] = useState(1);
 
   useEffect(() => {
     async function getEnrollments() {
       try {
-        const response = await api.get('enrollments');
+        const response = await api.get('enrollments', {
+          params: { page },
+        });
+
+        setTotalPages(Math.ceil(response.data.count / 10));
         const data = response.data.map(regist => ({
           ...regist,
           startDateFormatted: format(
@@ -44,7 +51,7 @@ export default function EnrollmentList() {
       }
     }
     getEnrollments();
-  }, []);
+  }, [page]);
 
   async function handleDelete(id) {
     try {
@@ -129,6 +136,7 @@ export default function EnrollmentList() {
             ))}
           </tbody>
         </DefaultTable>
+        <Pagination page={page} totalPages={totalPages} setPage={setPage} />
       </ActionContent>
     </>
   );

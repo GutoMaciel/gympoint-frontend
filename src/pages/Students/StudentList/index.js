@@ -7,11 +7,13 @@ import api from '~/services/api';
 import Toolbar from '~/components/Toolbar';
 import DefaultTable from '~/components/DefaultTable';
 import ActionContent from '~/components/ActionContent';
+import Pagination from '~/components/Pagination';
 
 export default function StudentList() {
   const [name, setName] = useState('');
   const [students, setStudents] = useState([]);
-  const [page, setPage] = useState([]);
+  const [page, setPage] = useState(1);
+  const [totalPages, setTotalPages] = useState(1);
 
   useEffect(() => {
     async function getStudents() {
@@ -20,10 +22,11 @@ export default function StudentList() {
           params: { page, name },
         });
 
-        if (response.data.count <= 15) {
+        if (response.data.count <= 10) {
           setPage(1);
         }
 
+        setTotalPages(Math.ceil(response.data.count / 10));
         setStudents(response.data.rows);
       } catch (err) {
         toast.error('No student was found.');
@@ -92,6 +95,7 @@ export default function StudentList() {
             ))}
           </tbody>
         </DefaultTable>
+        <Pagination page={page} totalPages={totalPages} setPage={setPage} />
       </ActionContent>
     </>
   );
