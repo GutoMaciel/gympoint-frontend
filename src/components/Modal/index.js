@@ -23,7 +23,7 @@ export default function AnswerModal({
   useEffect(() => {
     async function getQuestionInfo() {
       if (visible) {
-        const response = await api.get(`students/help-orders/${order_id}`);
+        const response = await api.get(`answer/${order_id}`);
         const { question } = response.data;
         setStudentQuestion(question);
       }
